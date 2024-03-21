@@ -1,0 +1,513 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8; /* Light gray background color */
+}
+/* Base styles for header */
+.header {
+    margin: 3vw; /* Adjust margin for responsiveness */
+    height: 8vh; /* Adjust height for responsiveness */
+    background: rgb(255, 32, 32);
+    transition: margin-top 0.3s ease; /* Add transition for smooth effect */
+    z-index: 1000; /* Ensure it's on top of other content */
+    display: flex; /* Make header items flex for better alignment */
+    justify-content: space-between; /* Align items evenly in header */
+    align-items: center; /* Center items vertically in header */
+    padding: 0 2vw; /* Add padding for better spacing */
+}
+
+/* Styles for contact information */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.contact-info p {
+    margin: 0;
+    color: #fff;
+    font-size: 10px; /* Adjusted font size for contact numbers */
+    margin-right: 11px;
+}
+
+.contact-info p i {
+    margin-right: 5px; /* Adjusted space between the icon and the number */
+    transform: translateX(-2px); /* Move the icon slightly to the left */
+}
+
+
+
+
+
+/* Fixed header styles */
+.header.fixed {
+    position: fixed;
+    top: 0;
+    width: 70%; /* Adjust width for responsiveness */
+    margin-top: 0; /* Remove margin when fixed */
+    transition: margin-top 0.3s ease; /* Add transition for smooth effect */
+}
+
+/* Styles for header items */
+.header h1 {
+    font-size: 2.5vh; /* Adjust font size for header title */
+    color: #fff; /* Set text color for header title */
+}
+
+.header nav ul {
+    list-style: none; /* Remove bullet points from list */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.header nav ul li {
+    display: inline-block; /* Display list items horizontally */
+    margin-right: 2vw; /* Add margin between list items */
+}
+
+.header nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #fff; /* Set text color for links */
+    font-size: 1.8vh; /* Adjust font size for links */
+    transition: color 0.3s ease; /* Add transition for smooth effect */
+}
+
+/* Hover effect for links */
+.header nav ul li a:hover {
+    color: #ffcccc; /* Change text color on hover */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .header {
+        margin: 4vw; /* Adjust margin for smaller screens */
+        height: 10vh; /* Adjust height for smaller screens */
+    }
+
+    .header h1 {
+        font-size: 2.2vh; /* Adjust font size for header title on smaller screens */
+    }
+
+    .header nav ul li {
+        margin-right: 1.5vw; /* Adjust margin between list items on smaller screens */
+    }
+
+    .header nav ul li a {
+        font-size: 1.6vh; /* Adjust font size for links on smaller screens */
+    }
+}
+
+/* Media query for even smaller screens */
+@media (max-width: 480px) {
+    .header {
+        margin: 6vw; /* Adjust margin for even smaller screens */
+        height: 12vh; /* Adjust height for even smaller screens */
+    }
+
+    .header h1 {
+        font-size: 1.8vh; /* Adjust font size for header title on even smaller screens */
+    }
+
+    .header nav ul li {
+        margin-right: 1vw; /* Adjust margin between list items on even smaller screens */
+    }
+
+    .header nav ul li a {
+        font-size: 1.4vh; /* Adjust font size for links on even smaller screens */
+    }
+}
+/* New styles for document requirements */
+.document-requirements {
+    position: absolute;
+    top: 50%;
+    right: 100%; /* Initially position it outside the header */
+    white-space: nowrap; /* Prevent line break */
+    font-weight: bold; /* Apply bold font weight */
+    color: #ff0000; /* Set color to red for emphasis */
+    animation: moveTrain 10s linear infinite; /* Apply animation */
+}
+
+@keyframes moveTrain {
+    0% {
+        right: 100%; /* Start position */
+        transform: translateX(0); /* Reset transformation */
+    }
+    50% {
+        right: 50%; /* Middle position */
+        transform: translateX(50%); /* Move to the middle */
+    }
+    100% {
+        right: 0; /* End position */
+        transform: translateX(0); /* Reset transformation */
+    }
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .document-requirements {
+        display: none; /* Hide document requirements on smaller screens */
+    }
+}
+
+
+
+.rent-now {
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+    background-color: #333; /* Background color */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left, right; /* Start positions from left and right */
+    padding: 100px 0;
+    color: #fff;
+    text-align: center;
+    position: relative; /* Add position relative for absolute positioning of text */
+    overflow: hidden; /* Hide overflowing text */
+    box-sizing: border-box; /* Include padding in width and height calculations */
+    animation: changeBackground 10s ease-in-out infinite; /* Adjust animation duration and timing function */
+}
+
+.left-slideshow {
+    float: left;
+}
+
+.right-slideshow {
+    float: right;
+}
+
+.rent-now p {
+    position: absolute; /* Position text absolutely */
+    top: 50%; /* Align text vertically */
+    left: 50%; /* Align text horizontally */
+    transform: translate(-50%, -50%); /* Center text */
+    margin: 0; /* Remove default margin */
+}
+
+/* Animation for individual letters */
+.rent-now p span {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeIn 2s ease infinite; /* Loop the animation */
+    animation-delay: calc(var(--delay) * 0.1s); /* Delay each letter */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes changeBackground {
+    0% {
+        background-position: left, right; /* Start positions from left and right */
+    }
+    50% {
+        background-position: left, right; /* Maintain positions for 50% of the animation */
+    }
+    51%, 100% {
+        background-position: left, right; /* End positions */
+    }
+}
+
+
+
+
+
+h1 {
+    color: #333;
+    font-size: 3vw;
+}
+
+p {
+    font-size: 2vw;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1.5vw 3vw; /* Adjusted padding */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 2vw; /* Dynamic font size */
+}
+
+.car-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.car-card {
+    width: 300px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: left;
+    transition: transform 0.3s ease; /* Add transition effect */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add glowing effect */
+}
+
+.car-card:hover {
+    transform: translateY(-10px); /* Pop-up effect on hover */
+}
+
+.car-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.about-section, .quicklinks, .address, .follow-us {
+    margin-top: 40px; /* Add spacing between sections */
+}
+
+.about-section,
+.quicklinks,
+.address {
+    background-color: #fff; /* White background color */
+    padding: 20px;
+    border-radius: 8px; /* Add rounded corners */
+}
+
+.follow-us {
+    background-color: #000; /* Black background color */
+    padding: 20px;
+}
+
+.follow-us h2 {
+    color: #fff; /* White text color */
+    margin-bottom: 10px; /* Add spacing below the heading */
+}
+
+.follow-us a {
+    color: #fff; /* White icon color */
+    margin: 0 10px; /* Add spacing between icons */
+    font-size: 24px; /* Adjust icon size */
+}
+
+.follow-us a:hover {
+    color: #4CAF50; /* Change icon color on hover */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #1b1b1b;
+    color: #fff;
+}
+
+/* Add the following styles to position the button */
+#mode-toggle-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    color: #333;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Styles for the moon icon */
+#mode-toggle-btn i {
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Add dark mode styles */
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Add dark mode styles for specific elements */
+.dark-mode h1,
+.dark-mode p,
+.dark-mode .about-section,
+.dark-mode .quicklinks,
+.dark-mode .address,
+.dark-mode .follow-us {
+    color: #fff;
+}
+
+.dark-mode .about-section,
+.dark-mode .quicklinks,
+.dark-mode .address,
+.dark-mode .follow-us {
+    background-color: #222;
+}
+
+/* CSS for mode toggle button */
+.mode-toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+/* Style the icon inside the button */
+.mode-toggle-btn i {
+    color: #333; /* Default color */
+}
+
+/* Dark mode specific styles */
+.dark-mode .mode-toggle-btn i {
+    color: #fff; /* Adjust icon color for dark mode */
+}
+
+/* CSS for car details and rent button */
+.car-details {
+    position: relative;
+    padding: 10px;
+}
+
+/* CSS for price logo and number */
+.price-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.price-logo {
+    width: 10px; /* Adjust the width as needed */
+    height: auto;
+    margin-right: 10px; /* Add some spacing between the logo and number */
+}
+
+.price {
+    font-size: 18px; /* Adjust the font size as needed */
+    margin: 0;
+    position: absolute;
+    bottom: 10px; /* Adjust the distance from the bottom */
+    left: 10px; /* Adjust the distance from the left */
+}
+
+
+.rent-button {
+    position: absolute;
+    bottom: 1px;
+    right: 0.1px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 6px 12px; /* Adjust button padding */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 10px; /* Adjust button font size */
+}
+
+/* Style the button on hover */
+.rent-button:hover {
+    background-color: #45a049;
+}
+
+
+.quicklinks {
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 20px;
+}
+
+.quicklinks h2 {
+    color: #ffffff;
+}
+
+.quicklinks ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quicklinks li {
+    margin-bottom: 20px;
+}
+
+.quicklinks strong {
+    font-size: 1.6em; /* Set font size of <strong> elements to be bigger */
+    color: #ff0000;
+}
+
+.quicklinks u {
+    text-decoration: underline;
+}
+
+.quicklinks p {
+    margin: 0;
+    font-size: 0.1em; /* Set font size of paragraphs to be smaller */
+}
+
+
+.car-card {
+    position: relative; /* Ensure relative positioning for absolute children */
+    width: 300px; /* Set a fixed width for all cards */
+    margin: 10px;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex; /* Ensure all cards are flex containers */
+    flex-direction: column; /* Stack content vertically within cards */
+    justify-content: space-between; /* Distribute space evenly within cards */
+}
+
+.car-card .car-image {
+    width: 100%; /* Ensure image width adjusts to fit the container */
+    height: auto; /* Allow height to adjust proportionally */
+    max-height: 200px; /* Set a maximum height for the images */
+    object-fit: contain; /* Ensure images fit without cropping */
+    margin-bottom: 10px; /* Add some space below the image */
+}
+
+.car-details {
+    flex: 1; /* Allow car details section to expand to fill remaining space */
+}
+
+.rent-button {
+    position: absolute; /* Position the button absolutely */
+    bottom: 10px; /* 10px from the bottom */
+    right: 10px; /* 10px from the right */
+    background-color: #4CAF50;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px; /* Adjust button font size */
+}
+
+.rent-button:hover {
+    background-color: #45a049;
+}
+
+.container {
+    position: relative;
+    padding-top: 50px; /* Adjust as needed to avoid overlapping with the header */
+}
+
+.container p {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.phone-number {
+    margin-right: 20px; /* Adjust as needed for the desired space */
+}
+
+.address {
+    margin-left: 20px; /* Adjust as needed for the desired space */
+    white-space: nowrap; /* Prevents the address from wrapping */
+    overflow: hidden; /* Hides any overflowing content */
+    text-overflow: ellipsis; /* Displays an ellipsis (...) when the content overflows */
+}

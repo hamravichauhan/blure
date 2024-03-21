@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Car Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <!-- <div class="container">
+        <p>
+            <span class="phone-number"><i class="fas fa-phone-alt"></i> 9423489036 | 9405959336</span>
+            <span class="address"><i class="fas fa-map-marker-alt"></i> Morjim Goa</span>
+        </p>
+    </div> -->
+    
+
+    <button id="mode-toggle-btn" class="mode-toggle-btn"><i class="fas fa-adjust"></i></button>
+
+
+    <div class="header" id="header">
+        <h1>OM SAI RENTAL</h1>
+        <div class="contact-info">
+            <p><i class="fas fa-phone-alt"></i> 9423489036 | 9405959336 </p>
+           
+        </div>
+    </div>
+    
+    
+    
+    <div class="rent-now">
+        <p>
+            <span style="--delay: 0">R</span>
+            <span style="--delay: 1">e</span>
+            <span style="--delay: 2">n</span>
+            <span style="--delay: 3">t</span>
+            <span style="--delay: 4"> </span> <!-- Add a space -->
+            <span style="--delay: 5">a</span>
+            <span style="--delay: 6"> </span> <!-- Add a space -->
+            <span style="--delay: 7">v</span>
+            <span style="--delay: 8">e</span>
+            <span style="--delay: 9">h</span>
+            <span style="--delay: 10">i</span>
+            <span style="--delay: 11">c</span>
+            <span style="--delay: 12">l</span>
+            <span style="--delay: 13">e</span>
+            <span style="--delay: 14"> </span> <!-- Add a space -->
+            <span style="--delay: 15">t</span>
+            <span style="--delay: 16">o</span>
+            <span style="--delay: 17">d</span>
+            <span style="--delay: 18">a</span>
+            <span style="--delay: 19">y</span>
+        </p>  
+    </div>
+    
+
+    <div class="car-container">
+      <!-- Car 1 -->
+      <div class="car-card">
+        <img src="yamaha-fascino-125-vivid-red.png" alt="Car Logo">
+        <h3 class="carName">FASINO (RED)</h3>
+        <div class="car-details dark-mode-toggle">
+            <p>Details:</p>
+            <ul>
+                <li><img src="logos/2.png" alt="Car Logo">Mileage :  14 kms/Ltr.</li>
+                <li><img src="logos/3.png" alt="Car Logo"> Seats: 2 seats</li>
+                
+                <li><img src="logos/5.png" alt="Car Logo"> Fuel Type: Petrol   </li>
+                <li><img src="logos/6.png" alt="Car Logo"> 37 Ltr Capacity</li>
+            </ul>
+            <p>₹475/d</p>
+            <button class="rent-button" onclick="redirectToWhatsApp('Yamaha Fascino 125 Vivid Red')">Rent Now</button>
+
+           
+        </div>
+    </div>
+
+    <!-- Car 2 -->
+    <div class="car-card">
+        <img src="yamaha-fascino-125-cool-blue-removebg-preview.png" alt="FASINO (BLUE)">
+        <h3>FASINO (BLUE)</h3>
+        <div class="car-details dark-mode-toggle">
+            <p>Details:</p>
+            <ul>
+                <li><img src="logos/2.png" alt="Car Logo">Mileage :  14 kms/Ltr.</li>
+                <li><img src="logos/3.png" alt="Car Logo"> Seats: 2 seats</li>
+                
+                <li><img src="logos/5.png" alt="Car Logo"> Fuel Type: Petrol   </li>
+                <li><img src="logos/6.png" alt="Car Logo"> 37 Ltr Capacity</li>
+            </ul>
+            <p> ₹ 500/d</p>
+            <button class="rent-button" onclick="redirectToWhatsApp()">Rent Now</button>
+        </div>
+    </div> 
+
+    <!-- Car 3 -->
+    <div class="car-card">
+        <img src="swife.png.png" alt="SWIFT">
+        <h3>SWIFT</h3>
+        <div class="car-details dark-mode-toggle">
+            <p>Details:</p>
+            <ul>
+                <li><img src="logos/2.png" alt="Car Logo">Mileage :  14 kms/Ltr.</li>
+                <li><img src="logos/3.png" alt="Car Logo"> Seats: 4 seats</li>
+                
+                <li><img src="logos/5.png" alt="Car Logo"> Fuel Type:  </li>
+                <li><img src="logos/6.png" alt="Car Logo"> 37 Ltr Capacity</li>
+            </ul>
+            <p> ₹ 1200/d</p>
+            <button class="rent-button" onclick="redirectToWhatsApp()">Rent Now</button>
+        </div>
+    </div> 
+
+    <!-- Car 4 -->
+    <div class="car-card">
+        <img src="download__1_-removebg-preview.png" alt="THAR">
+        <h3>THAR</h3>
+        <div class="car-details dark-mode-toggle">
+            <p>Details:</p>
+            <ul>
+                <li><img src="logos/2.png" alt="Car Logo">Mileage :  14 kms/Ltr.</li>
+                <li><img src="logos/3.png" alt="Car Logo"> Seats: 05 seats</li>
+                
+                <li><img src="logos/5.png" alt="Car Logo"> Fuel Type:  </li>
+                <li><img src="logos/6.png" alt="Car Logo"> 37 Ltr Capacity</li>
+            </ul>
+            <p> ₹ 1500/d</p>
+            <button class="rent-button" onclick="redirectToWhatsApp()">Rent Now</button>
+        </div>
+    </div> 
+
+    <!-- Car 5 -->
+    <div class="car-card">
+        <img src="download-removebg-preview (3).png" alt="BALENO (NEW)">
+        <h3>BALENO (NEW)</h3>
+        <div class="car-details dark-mode-toggle">
+            <p>Details:</p>
+            <ul>
+                <li><img src="logos/2.png" alt="Car Logo">Mileage :  14 kms/Ltr.</li>
+                <li><img src="logos/3.png" alt="Car Logo"> Seats: 05 seats</li>
+                
+                <li><img src="logos/5.png" alt="Car Logo"> Fuel Type:  </li>
+                <li><img src="logos/6.png" alt="Car Logo"> 37 Ltr Capacity</li>
+            </ul>
+            <p> ₹ 1500/d</p>
+            <button class="rent-button" onclick="redirectToWhatsApp()">Rent Now</button>
+        </div>
+    </div> 
+
+    <!-- Car 6 -->
+    <div class="car-card">
+        <img src="kindpng_1938987.png" alt="ACTIVA 4G">
+        <h3>ACTIVA 4G</h3>
+        <div class="car-details dark-mode-toggle">
+            <p>Details:</p>
+            <ul>
+                <li><img src="logos/2.png" alt="Car Logo">Mileage :  14 kms/Ltr.</li>
+                <li><img src="logos/3.png" alt="Car Logo"> Seats: 2 seats</li>
+                
+                <li><img src="logos/5.png" alt="Car Logo"> Fuel Type: Petrol   </li>
+                <li><img src="logos/6.png" alt="Car Logo"> 37 Ltr Capacity</li>
+            </ul>
+            <p> ₹ 450/d</p>
+            <button class="rent-button" onclick="redirectToWhatsApp()">Rent Now</button>
+        </div>
+    </div> 
+
+    <!-- Car 7 -->
+    <div class="car-card">
+        <img src="logos/pngwing.com.png" alt="ACTIVA 6G">
+        <h3>ACTIVA 6G</h3>
+        <div class="car-details dark-mode-toggle">
+            <p>Details:</p>
+            <ul>
+                <li><img src="logos/2.png" alt="Car Logo">Mileage :  14 kms/Ltr.</li>
+                <li><img src="logos/3.png" alt="Car Logo"> Seats: 2 seats</li>
+                
+                <li><img src="logos/5.png" alt="Car Logo"> Fuel Type: Petrol   </li>
+                <li><img src="logos/6.png" alt="Car Logo"> 37 Ltr Capacity</li>
+            </ul>
+            <p> ₹ 450/d</p>
+            <button class="rent-button" onclick="redirectToWhatsApp()">Rent Now</button>
+        </div>
+    </div> 
+</div>
+
+
+    <div class="about-section">
+        <h2>About Us</h2>
+        <p>om sai rental is undoubtedly one of the best vehicle rental service provider in Goa providing self-driven cars/bikes for rental. Started back in the year 2015 with dedication and professionalism </p>
+    </div>
+
+    <div class="quicklinks">
+        <h2>Terms and Conditions</h2>
+        <ul>
+            <li>
+                <strong><u>Security:</u></strong>
+                <p>ID proof such as PAN Card or Aadhaar Card will be required and retained by us for security purposes.</p>
+            </li>
+            <li>
+                <strong><u>License Requirement:</u></strong>
+                <p>A valid license is compulsory for all customers.</p>
+            </li>
+            <li>
+                <strong><u>Damage and Charges:</u></strong>
+                <p>The customer will be held responsible for any accidental damage and will be charged accordingly.</p>
+            </li>
+        </ul>
+    </div>
+    
+    
+
+    <div class="address">
+        <h2>Address</h2>
+        <p>Om sai rental morj</p>
+        <p>Phone: 9423489036 || 9405959336 </p>
+        <p>Email: <a href="mailto:Santoshswar07@gmail.com">Santoshswar07@gmail.com</a></p>
+    </div>
+
+    <div class="follow-us">
+        <h2>Follow Us</h2>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/ravichauhan8889?igsh=YjJ1NnMyYjJqMTFl"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.google.com/maps?q=15.6334667,73.8047175"><i class="fas fa-map-marker-alt"></i></a>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
