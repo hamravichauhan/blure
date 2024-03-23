@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
-<body>
+<body class="dark-mode">
     <!-- <div class="container">
         <p>
             <span class="phone-number"><i class="fas fa-phone-alt"></i> 9423489036 | 9405959336</span>
@@ -17,7 +17,10 @@
     </div> -->
     
 
-    <button id="mode-toggle-btn" class="mode-toggle-btn"><i class="fas fa-adjust"></i></button>
+    <button id="mode-toggle-btn" class="mode-toggle-btn">
+        <i class="fas fa-adjust"></i>
+        <!-- <i class="fas fa-sun"></i> -->
+      </button>
 
 
     <div class="header" id="header">
@@ -57,134 +60,126 @@
     
 
     <div class="car-container">
-      <!-- Car 1 -->
-      <div class="car-card">
-        <img src="yamaha-fascino-125-vivid-red.png" alt="Car Logo">
-        <h3 class="carName">FASINO (RED)</h3>
-        <div class="car-details dark-mode-toggle">
-            <p>Details:</p>
-            <ul>
-                <li><img src="logos/2.png" alt="Car Logo">Mileage :  14 kms/Ltr.</li>
-                <li><img src="logos/3.png" alt="Car Logo"> Seats: 2 seats</li>
-                
-                <li><img src="logos/5.png" alt="Car Logo"> Fuel Type: Petrol   </li>
-                <li><img src="logos/6.png" alt="Car Logo"> 37 Ltr Capacity</li>
-            </ul>
-            <p>₹475/d</p>
-            <button class="rent-button" onclick="redirectToWhatsApp('Yamaha Fascino 125 Vivid Red')">Rent Now</button>
-
-           
+       
+        <!-- Car 1 -->
+        <div class="car-card">
+            <img src="yamaha-fascino-125-vivid-red.png" alt="Car Logo">
+            <h3 class="carName">FASINO (RED)</h3>
+            <div class="car-details dark-mode-toggle">
+                <p>Details:</p>
+                <ul>
+                    <li><img src="logos/2.png" alt="Car Logo">Mileage: 14 kms/Ltr.</li>
+                    <li><img src="logos/3.png" alt="Car Logo">Seats: 2 seats</li>
+                    <li><img src="logos/5.png" alt="Car Logo">Fuel Type: Petrol</li>
+                    <li><img src="logos/6.png" alt="Car Logo">37 Ltr Capacity</li>
+                </ul>
+                <p>₹475/d</p>
+                <button class="rent-button" onclick="redirectToWhatsApp('FASINO (RED)')">Rent Now</button>
+            </div>
         </div>
-    </div>
-
-    <!-- Car 2 -->
-    <div class="car-card">
-        <img src="yamaha-fascino-125-cool-blue-removebg-preview.png" alt="FASINO (BLUE)">
-        <h3>FASINO (BLUE)</h3>
-        <div class="car-details dark-mode-toggle">
-            <p>Details:</p>
-            <ul>
-                <li><img src="logos/2.png" alt="Car Logo">Mileage :  14 kms/Ltr.</li>
-                <li><img src="logos/3.png" alt="Car Logo"> Seats: 2 seats</li>
-                
-                <li><img src="logos/5.png" alt="Car Logo"> Fuel Type: Petrol   </li>
-                <li><img src="logos/6.png" alt="Car Logo"> 37 Ltr Capacity</li>
-            </ul>
-            <p> ₹ 500/d</p>
-            <button class="rent-button" onclick="redirectToWhatsApp()">Rent Now</button>
-        </div>
-    </div> 
-
-    <!-- Car 3 -->
-    <div class="car-card">
-        <img src="swife.png.png" alt="SWIFT">
-        <h3>SWIFT</h3>
-        <div class="car-details dark-mode-toggle">
-            <p>Details:</p>
-            <ul>
-                <li><img src="logos/2.png" alt="Car Logo">Mileage :  14 kms/Ltr.</li>
-                <li><img src="logos/3.png" alt="Car Logo"> Seats: 4 seats</li>
-                
-                <li><img src="logos/5.png" alt="Car Logo"> Fuel Type:  </li>
-                <li><img src="logos/6.png" alt="Car Logo"> 37 Ltr Capacity</li>
-            </ul>
-            <p> ₹ 1200/d</p>
-            <button class="rent-button" onclick="redirectToWhatsApp()">Rent Now</button>
-        </div>
-    </div> 
-
-    <!-- Car 4 -->
-    <div class="car-card">
-        <img src="download__1_-removebg-preview.png" alt="THAR">
-        <h3>THAR</h3>
-        <div class="car-details dark-mode-toggle">
-            <p>Details:</p>
-            <ul>
-                <li><img src="logos/2.png" alt="Car Logo">Mileage :  14 kms/Ltr.</li>
-                <li><img src="logos/3.png" alt="Car Logo"> Seats: 05 seats</li>
-                
-                <li><img src="logos/5.png" alt="Car Logo"> Fuel Type:  </li>
-                <li><img src="logos/6.png" alt="Car Logo"> 37 Ltr Capacity</li>
-            </ul>
-            <p> ₹ 1500/d</p>
-            <button class="rent-button" onclick="redirectToWhatsApp()">Rent Now</button>
-        </div>
-    </div> 
-
-    <!-- Car 5 -->
-    <div class="car-card">
-        <img src="download-removebg-preview (3).png" alt="BALENO (NEW)">
-        <h3>BALENO (NEW)</h3>
-        <div class="car-details dark-mode-toggle">
-            <p>Details:</p>
-            <ul>
-                <li><img src="logos/2.png" alt="Car Logo">Mileage :  14 kms/Ltr.</li>
-                <li><img src="logos/3.png" alt="Car Logo"> Seats: 05 seats</li>
-                
-                <li><img src="logos/5.png" alt="Car Logo"> Fuel Type:  </li>
-                <li><img src="logos/6.png" alt="Car Logo"> 37 Ltr Capacity</li>
-            </ul>
-            <p> ₹ 1500/d</p>
-            <button class="rent-button" onclick="redirectToWhatsApp()">Rent Now</button>
-        </div>
-    </div> 
-
-    <!-- Car 6 -->
-    <div class="car-card">
-        <img src="kindpng_1938987.png" alt="ACTIVA 4G">
-        <h3>ACTIVA 4G</h3>
-        <div class="car-details dark-mode-toggle">
-            <p>Details:</p>
-            <ul>
-                <li><img src="logos/2.png" alt="Car Logo">Mileage :  14 kms/Ltr.</li>
-                <li><img src="logos/3.png" alt="Car Logo"> Seats: 2 seats</li>
-                
-                <li><img src="logos/5.png" alt="Car Logo"> Fuel Type: Petrol   </li>
-                <li><img src="logos/6.png" alt="Car Logo"> 37 Ltr Capacity</li>
-            </ul>
-            <p> ₹ 450/d</p>
-            <button class="rent-button" onclick="redirectToWhatsApp()">Rent Now</button>
-        </div>
-    </div> 
-
-    <!-- Car 7 -->
-    <div class="car-card">
-        <img src="logos/pngwing.com.png" alt="ACTIVA 6G">
-        <h3>ACTIVA 6G</h3>
-        <div class="car-details dark-mode-toggle">
-            <p>Details:</p>
-            <ul>
-                <li><img src="logos/2.png" alt="Car Logo">Mileage :  14 kms/Ltr.</li>
-                <li><img src="logos/3.png" alt="Car Logo"> Seats: 2 seats</li>
-                
-                <li><img src="logos/5.png" alt="Car Logo"> Fuel Type: Petrol   </li>
-                <li><img src="logos/6.png" alt="Car Logo"> 37 Ltr Capacity</li>
-            </ul>
-            <p> ₹ 450/d</p>
-            <button class="rent-button" onclick="redirectToWhatsApp()">Rent Now</button>
-        </div>
-    </div> 
-</div>
+        
+        <!-- Car 2 -->
+        <div class="car-card">
+            <img src="yamaha-fascino-125-cool-blue-removebg-preview.png" alt="FASINO (BLUE)">
+            <h3>FASINO (BLUE)</h3>
+            <div class="car-details dark-mode-toggle">
+                <p>Details:</p>
+                <ul>
+                    <li><img src="logos/2.png" alt="Car Logo">Mileage: 14 kms/Ltr.</li>
+                    <li><img src="logos/3.png" alt="Car Logo">Seats: 2 seats</li>
+                    <li><img src="logos/5.png" alt="Car Logo">Fuel Type: Petrol</li>
+                    <li><img src="logos/6.png" alt="Car Logo">37 Ltr Capacity</li>
+                </ul>
+                <p>₹500/d</p>
+                <button class="rent-button" onclick="redirectToWhatsApp('FASINO (BLUE)')">Rent Now</button>
+            </div>
+        </div> 
+        
+        <!-- Car 3 -->
+        <div class="car-card">
+            <img src="swife.png.png" alt="SWIFT">
+            <h3>SWIFT</h3>
+            <div class="car-details dark-mode-toggle">
+                <p>Details:</p>
+                <ul>
+                    <li><img src="logos/2.png" alt="Car Logo">Mileage: 14 kms/Ltr.</li>
+                    <li><img src="logos/3.png" alt="Car Logo">Seats: 4 seats</li>
+                    <li><img src="logos/5.png" alt="Car Logo">Fuel Type:</li>
+                    <li><img src="logos/6.png" alt="Car Logo">37 Ltr Capacity</li>
+                </ul>
+                <p>₹1200/d</p>
+                <button class="rent-button" onclick="redirectToWhatsApp('SWIFT')">Rent Now</button>
+            </div>
+        </div> 
+        
+        <!-- Car 4 -->
+        <div class="car-card">
+            <img src="download__1_-removebg-preview.png" alt="THAR">
+            <h3>THAR</h3>
+            <div class="car-details dark-mode-toggle">
+                <p>Details:</p>
+                <ul>
+                    <li><img src="logos/2.png" alt="Car Logo">Mileage: 14 kms/Ltr.</li>
+                    <li><img src="logos/3.png" alt="Car Logo">Seats: 05 seats</li>
+                    <li><img src="logos/5.png" alt="Car Logo">Fuel Type:</li>
+                    <li><img src="logos/6.png" alt="Car Logo">37 Ltr Capacity</li>
+                </ul>
+                <p>₹1500/d</p>
+                <button class="rent-button" onclick="redirectToWhatsApp('THAR')">Rent Now</button>
+            </div>
+        </div> 
+        
+        <!-- Car 5 -->
+        <div class="car-card">
+            <img src="download-removebg-preview (3).png" alt="BALENO (NEW)">
+            <h3>BALENO (NEW)</h3>
+            <div class="car-details dark-mode-toggle">
+                <p>Details:</p>
+                <ul>
+                    <li><img src="logos/2.png" alt="Car Logo">Mileage: 14 kms/Ltr.</li>
+                    <li><img src="logos/3.png" alt="Car Logo">Seats: 05 seats</li>
+                    <li><img src="logos/5.png" alt="Car Logo">Fuel Type:</li>
+                    <li><img src="logos/6.png" alt="Car Logo">37 Ltr Capacity</li>
+                </ul>
+                <p>₹1500/d</p>
+                <button class="rent-button" onclick="redirectToWhatsApp('BALENO (NEW)')">Rent Now</button>
+            </div>
+        </div> 
+        
+        <!-- Car 6 -->
+        <div class="car-card">
+            <img src="kindpng_1938987.png" alt="ACTIVA 4G">
+            <h3>ACTIVA 4G</h3>
+            <div class="car-details dark-mode-toggle">
+                <p>Details:</p>
+                <ul>
+                    <li><img src="logos/2.png" alt="Car Logo">Mileage: 14 kms/Ltr.</li>
+                    <li><img src="logos/3.png" alt="Car Logo">Seats: 2 seats</li>
+                    <li><img src="logos/5.png" alt="Car Logo">Fuel Type: Petrol</li>
+                    <li><img src="logos/6.png" alt="Car Logo">37 Ltr Capacity</li>
+                </ul>
+                <p>₹450/d</p>
+                <button class="rent-button" onclick="redirectToWhatsApp('ACTIVA 4G')">Rent Now</button>
+            </div>
+        </div> 
+        
+        <!-- Car 7 -->
+        <div class="car-card">
+            <img src="logos/pngwing.com.png" alt="ACTIVA 6G">
+            <h3>ACTIVA 6G</h3>
+            <div class="car-details dark-mode-toggle">
+                <p>Details:</p>
+                <ul>
+                    <li><img src="logos/2.png" alt="Car Logo">Mileage: 14 kms/Ltr.</li>
+                    <li><img src="logos/3.png" alt="Car Logo">Seats: 2 seats</li>
+                    <li><img src="logos/5.png" alt="Car Logo">Fuel Type: Petrol</li>
+                    <li><img src="logos/6.png" alt="Car Logo">37 Ltr Capacity</li>
+                </ul>
+                <p>₹450/d</p>
+                <button class="rent-button" onclick="redirectToWhatsApp('ACTIVA 6G')">Rent Now</button>
+            </div>
+        </div> 
+        
 
 
     <div class="about-section">

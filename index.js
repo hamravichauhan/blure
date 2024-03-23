@@ -1,62 +1,53 @@
-function redirectToWhatsApp(carName) {
-    var whatsappNumber = "+918805208407";
-    var message = "I'm interested in renting the " + carName + ". Please provide more details.";
-    var encodedMessage = encodeURIComponent(message);
-    var whatsappUrl = "https://wa.me/" + whatsappNumber + "?text=" + encodedMessage;
-    window.location.href = whatsappUrl;
-}
-
-
-
-function adjustFontSize() {
-    var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+function redirectToWhatsApp(carName = '') {
+    const whatsappNumber = "+918805208407";
+    let message = "I'm interested in renting a vehicle.";
+    if (carName) {
+      message += ` Specifically, I'm interested in the ${carName}.`;
+    }
+    message += " Please provide more details.";
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    window.open(whatsappUrl, '_blank');
+  }
+  
+  function adjustFontSize() {
+    const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+    const elements = document.querySelectorAll('h1, p, button');
     if (viewportWidth <= 480) {
-        document.querySelectorAll('h1, p, button').forEach(function(element) {
-            element.style.fontSize = '4vw';
-        });
+      elements.forEach(element => element.style.fontSize = '4vw');
     } else if (viewportWidth <= 768) {
-        document.querySelectorAll('h1, p, button').forEach(function(element) {
-            element.style.fontSize = '3vw';
-        });
+      elements.forEach(element => element.style.fontSize = '3vw');
     } else {
-        document.querySelectorAll('h1, p, button').forEach(function(element) {
-            element.style.fontSize = '2vw';
-        });
+      elements.forEach(element => element.style.fontSize = '2vw');
     }
-}
-
-window.addEventListener('scroll', function() {
-    var header = document.getElementById('header');
-    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (scrollTop > 0) {
-        header.classList.add('fixed');
+  }
+  
+  function toggleHeader() {
+    const header = document.getElementById('header');
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const screenWidth = window.innerWidth;
+  
+    if (screenWidth >= 768) {
+      header.classList.toggle('fixed', scrollTop > 0);
     } else {
-        header.classList.remove('fixed');
+      header.classList.remove('fixed');
     }
-});
-
-
-
-window.addEventListener('resize', adjustFontSize);
-adjustFontSize();
-
-// Toggle dark mode for body element
-document.body.classList.toggle("dark-mode");
-
-// Event listener for mode toggle button
-document.getElementById("mode-toggle-btn").addEventListener("click", function() {
+  }
+  
+  function toggleDarkMode() {
     document.body.classList.toggle("dark-mode");
-
-    // Toggle dark mode for specific elements
-    var elements = document.querySelectorAll('.dark-mode-toggle');
-    elements.forEach(function(element) {
-        element.classList.toggle("dark-mode");
+    const elements = document.querySelectorAll('.dark-mode-toggle');
+    elements.forEach(element => {
+      element.classList.toggle("dark-mode");
     });
-});
-
-// Array of image URLs for slideshow
-var images = [
+    // Update the mode toggle button icon
+    const modeToggleBtn = document.getElementById("mode-toggle-btn");
+    const icon = modeToggleBtn.querySelector("i");
+    icon.classList.toggle("fa-adjust");
+    icon.classList.toggle("fa-sun");
+  }
+  
+  const images = [
     "yamaha-fascino-125-vivid-red.png",
     "yamaha-fascino-125-cool-blue-removebg-preview.png",
     "swife.png.png",
@@ -64,36 +55,29 @@ var images = [
     // "download-removebg-preview (3).png",
     // "kindpng_1938987.png",
     // "logos/pngwing.com.png",
-    
-];
-
-// Index to track the current image
-var currentIndex = 0;
-
-// Function to change the background image
-function changeBackgroundImage() {
-    var imageUrl = images[currentIndex];
-    document.querySelector(".rent-now").style.backgroundImage = "url('" + imageUrl + "')";
-    
-    // Move to the next image
+  ];
+  
+  let currentIndex = 0;
+  
+  function changeBackgroundImage() {
+    const imageUrl = images[currentIndex];
+    document.querySelector(".rent-now").style.backgroundImage = `url('${imageUrl}')`;
     currentIndex = (currentIndex + 1) % images.length;
-}
-
-// Call the function initially
-changeBackgroundImage();
-
-// Interval for the slideshow animation
-var intervalId;
-
-// Start the slideshow animation
-function startSlideshow() {
-    intervalId = setInterval(changeBackgroundImage, 3000); // Change image every 3 seconds
-}
-
-// Stop the slideshow animation
-function stopSlideshow() {
+  }
+  
+  let intervalId;
+  
+  function startSlideshow() {
+    intervalId = setInterval(changeBackgroundImage, 3000);
+  }
+  
+  function stopSlideshow() {
     clearInterval(intervalId);
-}
-
-// Start the slideshow initially
-startSlideshow();
+  }
+  
+  window.addEventListener('scroll', toggleHeader);
+  window.addEventListener('resize', adjustFontSize);
+  document.getElementById("mode-toggle-btn").addEventListener("click", toggleDarkMode);
+  
+  adjustFontSize();
+  startSlideshow();
