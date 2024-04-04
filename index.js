@@ -1,5 +1,5 @@
 function redirectToWhatsApp(carName = '') {
-    const whatsappNumber = "+918805208407";
+    const whatsappNumber = "+919423489036";
     let message = "I'm interested in renting a vehicle.";
     if (carName) {
       message += ` Specifically, I'm interested in the ${carName}.`;
